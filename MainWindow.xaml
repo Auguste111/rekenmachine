@@ -1,0 +1,68 @@
+﻿<Window x:Class="Rekenmachine.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rekenmachine"
+        mc:Ignorable="d"
+        Title="Rekenmachine"
+        Height="700" Width="400"
+        FontFamily="{StaticResource DS-DIGI}">
+    <Grid Background="#010101">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+        
+
+        <Grid Grid.RowSpan="2">
+            <TextBlock Name="Som" Text="" FontSize="60px" TextAlignment="Right" Margin="-345,64,20,544" Foreground="#e8e8e8"/>
+        </Grid>
+
+        <Grid Margin="0,170,0,0" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- Row 1 -->
+            <Button Grid.Row="0" Grid.Column="0" Content="C" Margin="3px" FontSize="47px" Background="#A9A9A9" Foreground="#e8e8e8" Height="97" VerticalAlignment="Bottom" Click="Button_Click_16" FontFamily="{DynamicResource DS-DIGI}"/>
+            <Button Grid.Row="0" Grid.Column="1" Content="(" Margin="3px" FontSize="47px" Background="#A9A9A9" Foreground="#e8e8e8" Click="Button_Click_17" FontFamily="{DynamicResource DS-DIGI}"/>
+            <Button Grid.Row="0" Grid.Column="2" Content=")" Margin="3px" FontSize="47px" Background="#A9A9A9" Foreground="#e8e8e8" Click="Button_Click_18" FontFamily="{DynamicResource DS-DIGI}"/>
+            <Button Grid.Row="0" Grid.Column="3" Content="/" Margin="3px" FontSize="47px" Background="orange" Foreground="#e8e8e8" Click="Button_Click_19" FontFamily="{DynamicResource DS-DIGI}"/>
+
+            <!-- Row 2 -->
+            <Button Grid.Row="1" Grid.Column="0" Content="7" Margin="3px" FontSize="47px" Background="#2d2c31" Foreground="#e8e8e8" Click="Button_Click_12" FontFamily="{DynamicResource DS-DIGI}"/>
+            <Button Grid.Row="1" Grid.Column="1" Content="8" Margin="3px" FontSize="47px" Background="#2d2c31" Foreground="#e8e8e8" Click="Button_Click_13" FontFamily="{DynamicResource DS-DIGI}"/>
+            <Button Grid.Row="1" Grid.Column="2" Content="9" Margin="3px" FontSize="47px" Background="#2d2c31" Foreground="#e8e8e8" Click="Button_Click_14" FontFamily="{DynamicResource DS-DIGI}"/>
+            <Button Grid.Row="1" Grid.Column="3" Content="X" Margin="3px" FontSize="47px" Background="Orange" Foreground="#e8e8e8" Click="Button_Click_15" FontFamily="{DynamicResource DS-DIGI}"/>
+
+            <!-- Row 3 -->
+            <Button Grid.Row="2" Grid.Column="0" Content="4" Margin="3px" FontSize="47px" Background="#2d2c31" Foreground="#e8e8e8" Click="Button_Click_8" FontFamily="{DynamicResource DS-DIGI}"/>
+            <Button Grid.Row="2" Grid.Column="1" Content="5" Margin="3px" FontSize="47px" Background="#2d2c31" Foreground="#e8e8e8" Click="Button_Click_9" FontFamily="{DynamicResource DS-DIGI}"/>
+            <Button Grid.Row="2" Grid.Column="2" Content="6" Margin="3px" FontSize="47px" Background="#2d2c31" Foreground="#e8e8e8" Click="Button_Click_10" FontFamily="{DynamicResource DS-DIGI}"/>
+            <Button Grid.Row="2" Grid.Column="3" Content="-" Margin="3px" FontSize="47px" Background="Orange" Foreground="#e8e8e8" Click="Button_Click_11" FontFamily="{DynamicResource DS-DIGI}"/>
+
+            <!-- Row 4 -->
+            <Button Grid.Row="3" Grid.Column="0" Content="1" Margin="3px" FontSize="47px" Background="#2d2c31" Foreground="#e8e8e8" Click="Button_Click_4" FontFamily="{DynamicResource DS-DIGI}"/>
+            <Button Grid.Row="3" Grid.Column="1" Content="2" Margin="3px" FontSize="47px" Background="#2d2c31" Foreground="#e8e8e8" Click="Button_Click_5" FontFamily="{DynamicResource DS-DIGI}"/>
+            <Button Grid.Row="3" Grid.Column="2" Content="3" Margin="3px" FontSize="47px" Background="#2d2c31" Foreground="#e8e8e8" Click="Button_Click_6" FontFamily="{DynamicResource DS-DIGI}"/>
+            <Button Grid.Row="3" Grid.Column="3" Content="+" Margin="3px" FontSize="47px" Background="orange" Foreground="#e8e8e8" Click="Button_Click_7" FontFamily="{DynamicResource DS-DIGI}"/>
+
+            <!-- Row 5 -->
+            <Button Grid.Row="4" Grid.Column="0" Content="+/-" Margin="3px" FontSize="47px" Background="#2d2c31" Foreground="#e8e8e8" Click="Button_Click" FontFamily="{DynamicResource DS-DIGI}"/>
+            <Button Grid.Row="4" Grid.Column="1" Content="0" Margin="3px" FontSize="47px" Background="#2d2c31" Foreground="#e8e8e8" Click="Button_Click_1" FontFamily="{DynamicResource DS-DIGI}"/>
+            <Button Grid.Row="4" Grid.Column="2" Content="," Margin="3px" FontSize="47px" Background="#2d2c31" Foreground="#e8e8e8" Click="Button_Click_2" FontFamily="{DynamicResource DS-DIGI}"/>
+            <Button Grid.Row="4" Grid.Column="3" Content="=" Margin="3px" FontSize="47px" Background="Orange" Foreground="#e8e8e8" Click="Button_Click_3" FontFamily="{DynamicResource DS-DIGI}"/>
+        </Grid>
+    </Grid>
+</Window>
